@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Set this to the main language of your site -->
+<head>
+    <meta charset="utf-8">
+    <title>BACON/strip - A Stripped-down Sass Framework</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="css/styles.min.css" rel="stylesheet" media="all">
+</head>
+<body>
+    <!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
+    <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
+    <header role="banner" class="bacontainer">
+
+        <div class="row">
+            <div class="twelve columns">
+                <h1>BACON/strip</h1>
+                <h2>A Stripped-down Sass Framework</h2>
+
+                <!-- ARIA: the landmark role "navigation" is added here as the element contains site navigation
+                NOTE: The <nav> element does not have to be contained within a <header> element, even though the two examples on this page are. -->
+                <nav role="navigation">
+                    <!-- This can contain your site navigation either in an unordered list or even a paragraph that contains links that allow users to navigate your site -->
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- If you want to use an element as a wrapper, i.e. for styling only, then <div> is still the element to use -->
+    <div class="bacontainer">
+
+        <!-- The <main> element is used to enclose the main content, i.e. that which contains the central topic of a document -->
+        <!-- ARIA: the landmark role "main" is added here as it contains the main content of the document, and it is recommended to add it to the
+        <main> element until user agents implement the required role mapping. -->
+        <main role="main" class="row">
+
+            <!-- The <section> element can be used to enclose content that comes under a related heading.
+            NOTE: The <section> element can contain <article> elements and vice versa, if you think the content warrants it. -->
+            <section class="twelve columns">
+
+                <!-- This is the section's header. It contains the heading and navigation links for within the section -->
+                <header>
+                    <h2>Getting Started</h2>
+                    <!-- ARIA: the landmark role "navigation" is added here as the element contains page navigation -->
+                    <nav role="navigation">
+                        <ul>
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#thanks">Thanks To</a></li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <!-- The <article> element can be used to enclose content that still makes sense on its own and is therefore "reusable" -->
+                <article id="introduction">
+
+                    <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
+                    <h3>Introduction</h3>
+
+                    <!-- Content -->
+                    <p>Welcome to <abbr title="HyperText Markup Language 5">HTML5</abbr> Bones. This is a template that contains comments to aid you with setting up your <abbr title="HyperText Markup Language 5">HTML5</abbr> document.</p>
+                    <p><a href="#" class="button">Button</a> <a href="#" class="button-primary">Button</a></p>
+                    <form>
+                    <div><label for="name">Name:</label>
+                    <input type="text" name="name">
+                    </div>
+                    </form>
+
+                </article>
+
+                <article id="thanks">
+
+                    <h3>Thanks To</h3>
+                    <ul>
+                        <li>BACON/strip started based on the <a href="https://github.com/WhatsNewSaes/Skeleton-Sass">Sass Version of Skeleton</a> by Seth Coelen. Thanks to Seth and the team behind <a href="http://getskeleton.com">Skeleton</a>.</li>
+                        <li><a href="https://html5bones.com">HTML5 Bones</a> was used as a starting point for this information page.</li>
+                        <li>BACON/strip incorporates <a href="github.com/necolas/normalize.css">normalize.css</a></li>
+                        <li>ASCII art in comments modified from <a href="http://www.asciiartfarts.com/20100817.html">http://www.asciiartfarts.com/20100817.html</a></li>
+                    </ul>
+
+                </article>
+
+            </section>
+
+        </main>
+
+        <!-- An <aside> is used to enclose content that is additional to the main content but not essential. If it were removed, the meaning of the main content should not be lost, but the content of the <aside> also retains its meaning.
+        NOTE: the aside is placed outside of the <main> element as while its content is related to the content that is within the <main>
+        element, it is not part of it -->
+        <!-- ARIA: the landmark role "complementary" is added here as it contains supporting information for the main content that remains meaningful even when separated from it -->
+        <aside role="complementary" class="row">
+            <div class="twelve columns">
+                <!-- A <header> element is not required here as the heading only contains a single <h3> element -->
+                <h3>Did you know?</h3>
+
+                <!-- Content -->
+                <p>The article and section elements cause a lot of confusion when people are trying to decide how and when to use them. The article: <a href="http://www.iandevlin.com/blog/2011/04/html5/html5-section-or-article">section or article?</a> might help you choose.</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- The main page footer can contain items such as copyright and contact information. It can also contain a duplicated navigation of your site which is not usually contained within a <nav> -->
+    <!-- ARIA: the landmark role "contentinfo" is added here as it contains metadata that applies to the parent document -->
+    <footer role="contentinfo">
+
+    <div class="bacontainer">
+        <div class="row">
+            <div class="twelve columns">
+                <!-- The <address> element contains contact information for the nearest <article> or <body> element. This example is for the <body> -->
+                <address>
+                  <p>For further information, please contact <a href="mailto:admin@example.com">Max Mustermann</a>.</p>
+                </address>
+
+                <!-- Copyright information can be contained within the <small> element. The <time> element is used here to indicate that the '2016' is a date -->
+                <small>Copyright &copy; <time datetime="2016">2016</time> Troy Meier</small>
+            </div>
+        </div>
+    </div>
+
+    </footer>
+
+</body>
+</html>

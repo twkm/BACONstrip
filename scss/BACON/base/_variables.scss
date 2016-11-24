@@ -1,0 +1,108 @@
+// Variables
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Breakpoints
+$bp-larger-than-mobile    : 400px !default;
+$bp-larger-than-phablet   : 550px !default;
+$bp-larger-than-tablet    : 750px !default;
+$bp-larger-than-desktop   : 1000px !default;
+$bp-larger-than-desktophd : 1200px !default;
+
+// @media Shorthand Variables
+// To use in styles:
+// @media #{$media-mobile} {
+//		// Mobile Styles
+//}
+// Specific @media shorthand variables
+$media-mobile: '(max-width: #{$bp-larger-than-phablet - 1px})';
+$media-phablet: '(min-width: #{$bp-larger-than-phablet}) and (max-width: #{$bp-larger-than-tablet - 1px})';
+$media-tablet: '(min-width: #{$bp-larger-than-tablet}) and (max-width: #{$bp-larger-than-desktop - 1px})';
+$media-desktop: '(min-width: #{$bp-larger-than-desktop}) and (max-width: #{$bp-larger-than-desktophd - 1px})';
+$media-desktop-hd: '(min-width: #{$bp-larger-than-desktophd})';
+
+// Less than @media shorthands
+$media-lt-tablet: '(max-width: #{$bp-larger-than-tablet - 1px})';
+$media-lt-desktop: '(max-width: #{$bp-larger-than-desktophd - 1px})';
+$media-lt-desktop-hd: '(max-width: #{$bp-larger-than-desktophd - 1px})';
+
+// Greater than @media shorthands
+$media-gt-mobile: '(min-width: #{$bp-larger-than-mobile})';
+$media-gt-phablet: '(min-width: #{$bp-larger-than-phablet})';
+$media-gt-tablet: '(min-width: #{$bp-larger-than-tablet})';
+$media-gt-desktop: '(min-width: #{$bp-larger-than-desktop})';
+$media-gt-desktop-hd: '(min-width: #{$bp-larger-than-desktophd})';
+
+// Colors
+$light-grey: #e1e1e1 !default;
+$dark-grey: #333 !default;
+
+$primary-color: #33c3f0 !default;
+$secondary-color: lighten($dark-grey, 13.5%) !default;
+$tertiary-color: darken($primary-color, 15%) !default;
+
+$border-color: #bbb !default;
+$link-color: $primary-color;
+$font-color: #222 !default;
+
+// Typography
+$font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+//Grid Variables
+$container-width: 1075px !default;
+$container-width-larger-than-mobile: 85% !default;
+$container-width-larger-than-phablet: 80% !default;
+$total-columns: 12 !default;
+$column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
+$column-margin: 4% !default; // space between columns
+
+// Misc
+$global-radius: 4px !default;
+
+// Custom prefixes for naming and retrofitting
+$tools-prefix: '.bs-' !default;
+$plugins-prefix: '.bit-' !default;
+
+$container-selector: '.container' !default;
+$row-selector: '.row' !default;
+
+$column-selector-single: '.column' !default;
+$column-selector-plural: '.columns' !default;
+$col-1-selector: '.one#{$column-selector-single}, .one#{$column-selector-plural}' !default;
+$col-2-selector: '.two#{$column-selector-plural}' !default;
+$col-3-selector: '.three#{$column-selector-plural}' !default;
+$col-4-selector: '.four#{$column-selector-plural}' !default;
+$col-5-selector: '.five#{$column-selector-plural}' !default;
+$col-6-selector: '.six#{$column-selector-plural}' !default;
+$col-7-selector: '.seven#{$column-selector-plural}' !default;
+$col-8-selector: '.eight#{$column-selector-plural}' !default;
+$col-9-selector: '.nine#{$column-selector-plural}' !default;
+$col-10-selector: '.ten#{$column-selector-plural}' !default;
+$col-11-selector: '.eleven#{$column-selector-plural}' !default;
+$col-12-selector: '.twelve#{$column-selector-plural}' !default;
+
+$col-one-third-selector: '.one-third#{$column-selector-single}' !default;
+$col-two-thirds-selector: '.two-thirds#{$column-selector-single}' !default;
+$col-one-half-selector: '.one-half#{$column-selector-single}' !default;
+$col-one-quarter-selector: '.one-quarter#{$column-selector-single}' !default;
+
+$offset-selector-prefix: '.offset-by-' !default;
+
+$offset-1-selector: '#{$offset-selector-prefix}one' !default;
+$offset-2-selector: '#{$offset-selector-prefix}two' !default;
+$offset-3-selector: '#{$offset-selector-prefix}three' !default;
+$offset-4-selector: '#{$offset-selector-prefix}four' !default;
+$offset-5-selector: '#{$offset-selector-prefix}five' !default;
+$offset-6-selector: '#{$offset-selector-prefix}six' !default;
+$offset-7-selector: '#{$offset-selector-prefix}seven' !default;
+$offset-8-selector: '#{$offset-selector-prefix}eight' !default;
+$offset-9-selector: '#{$offset-selector-prefix}nine' !default;
+$offset-10-selector: '#{$offset-selector-prefix}ten' !default;
+$offset-11-selector: '#{$offset-selector-prefix}eleven' !default;
+
+$offset-one-third-selector: '#{$offset-selector-prefix}one-third' !default;
+$offset-two-thirds-selector: '#{$offset-selector-prefix}two-thirds' !default;
+$offset-one-half-selector: '#{$offset-selector-prefix}one-half' !default;
+$offset-one-quarter-selector: '#{$offset-selector-prefix}one-quarter' !default;
+
+
+

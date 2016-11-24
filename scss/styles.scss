@@ -1,0 +1,20 @@
+// CUSTOM DEFINITIONS
+// Create any custom definitions here, before the base files are loaded. 
+// See the base/_variables.scss file for variables that can be set
+
+// Example:
+// $container-selector: '.bacontainer';
+// $row-selector: '.row';
+// $plugins-prefix: 'bit-';
+
+$container-selector: '.bacontainer';
+$primary-color: #0DA900;
+
+@import "BACON/strip";
+
+// PLUGINS //
+// @import "BACON/plugins/nr-columns"; // Non-responsive columns plugin
+@import "BACON/plugins/breakpoint-utilities";
+// @import "BACON/plugins/rmedia-wrapper"; // Responsive media helper plugin
+
+// Your styles go here...

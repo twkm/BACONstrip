@@ -1,0 +1,121 @@
+// Hide/show elements at breakpoints
+// Breakpoint shorthand
+// Author: Troy Meier
+// URL: http://twkm.ca
+
+.show-mobile-block,
+.show-mobile-inline-block,
+.show-mobile-inline,
+.show-phablet-block,
+.show-phablet-inline-block,
+.show-phablet-inline,
+.show-tablet-block,
+.show-tablet-inline-block,
+.show-tablet-inline,
+.show-desktop-block,
+.show-desktop-inline-block,
+.show-desktop-inline,
+.show-desktop-hd-block,
+.show-desktop-hd-inline-block,
+.show-desktop-hd-inline {
+  display: none;
+}
+
+@media #{$media-mobile} {
+
+    .hide-mobile {
+      display: none !important;
+    }
+
+    .show-mobile-block {
+      display: block !important;
+    }
+
+    .show-mobile-inline-block {
+      display: inline-block !important;
+    }
+
+    .show-mobile-inline {
+      display: inline !important;
+    }
+}
+
+@media #{$media-phablet} {
+
+    .hide-phablet {
+      display: none !important;
+    }
+
+    .show-phablet-block {
+      display: block !important;
+    }
+
+    .show-phablet-inline-block {
+      display: inline-block !important;
+    }
+
+    .show-phablet-inline {
+      display: inline !important;
+    }
+
+}
+
+@media #{$media-tablet} {
+
+    .hide-tablet {
+      display: none !important;
+    }
+
+    .show-tablet-block {
+      display: block !important;
+    }
+
+    .show-tablet-inline-block {
+      display: inline-block !important;
+    }
+
+    .show-tablet-inline {
+      display: inline !important;
+    }
+
+}
+
+@media #{$media-desktop} {
+
+    .hide-desktop {
+      display: none !important;
+    }
+
+    .show-desktop-block {
+      display: block !important;
+    }
+
+    .show-desktop-inline-block {
+      display: inline-block !important;
+    }
+
+    .show-desktop-inline {
+      display: inline !important;
+    }
+
+}
+
+@media #{$media-desktop-hd} {
+
+    .hide-desktop-hd {
+      display: none !important;
+    }
+
+    .show-desktop-hd-block {
+      display: block !important;
+    }
+
+    .show-desktop-hd-inline-block {
+      display: inline-block !important;
+    }
+
+    .show-desktop-hd-inline {
+      display: inline !important;
+    }
+
+}
