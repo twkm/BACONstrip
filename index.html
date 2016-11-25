@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BACON/strip - A Stripped-down Sass Framework</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="css/styles.css" rel="stylesheet" media="all">
+</head>
+<body>
+    
+    <header role="banner" class="bacontainer">
+        <div class="row">
+            <div class="twelve columns">
+                <h1>BACON/strip</h1>
+                <h2>A Stripped-down Sass Framework</h2>
+
+                <nav role="navigation">
+                    <ul>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#base">Base Components</a></li>
+                        <li><a href="#plugins">Plugins</a></li>
+                        <li><a href="#thanks">Thanks To</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="bacontainer">
+        <main role="main" class="row">
+            <section class="twelve columns">
+
+                <article id="introduction">
+                    <h2>Introduction</h2>
+                    <p>BACON/strip was created to be a completely customizable, lightweight responsive framework. Built with Sass, this framework allows you to customize everything, from how you name the selectors for containers in the grid, to the prefixes used for tools and plugins. This ability was initially created to be able to easily retrofit an existing grid system, but it also allows you to show a little of your own style in your code (the container for this page has had its selector renamed to <code>.bacontainer</code>).</p>
+                    <p>The framework also provides an easy way to create plugins to enhance its usefullness. Although it is simple and lightweight, BACON/strip can easily be extended to suit your unique needs.</p>
+                </article>
+
+                <hr>
+
+                <article id="base">
+                    <h2>Base Components</h2>
+                    <p>BACON/strip contains only the essential base components needed to build a responsive site. It includes a grid and default styling for many HTML elements, although that styling can be easily customized by editing the base variables.</p>
+
+                    <h3>Grid</h3>
+                    <p>The grid in BACON/strip is a responsive grid which fluidly transitions between breakpoints to allow you to style your HTML to adapt to different sizes of display.</p>
+                    <p>By default, the grid container has a maximum width of 1075px, but this is easily changed using Sass.</p>
+
+                    <div class="example-grid">
+                        <div class="row">
+                            <div class="one column">One</div>
+                            <div class="eleven columns">Eleven</div>
+                        </div>
+                        <div class="row">
+                            <div class="two columns">Two</div>
+                            <div class="ten columns">Ten</div>
+                        </div>
+                        <div class="row">
+                            <div class="three columns">Three</div>
+                            <div class="nine columns">Nine</div>
+                        </div>
+                        <div class="row">
+                            <div class="four columns">Four</div>
+                            <div class="eight columns">Eight</div>
+                        </div>
+                        <div class="row">
+                            <div class="five columns">Five</div>
+                            <div class="seven columns">Seven</div>
+                        </div>
+                        <div class="row">
+                            <div class="six columns">Six</div>
+                            <div class="six columns">Six</div>
+                        </div>
+                    </div>
+
+                    <pre><code class="example-code">&lt;div class="container">
+    &lt;div class="row">
+        &lt;div class="one column">One&lt;/div>
+        &lt;div class="eleven columns">Eleven&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+        &lt;div class="two columns">Two&lt;/div>
+        &lt;div class="ten columns">Ten&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+        &lt;div class="three columns">Three&lt;/div>
+        &lt;div class="nine columns">Nine&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+        &lt;div class="four columns">Four&lt;/div>
+        &lt;div class="eight columns">Eight&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+        &lt;div class="five columns">Five&lt;/div>
+        &lt;div class="seven columns">Seven&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+        &lt;div class="six columns">Six&lt;/div>
+        &lt;div class="six columns">Six&lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+
+                    <p>You can also define columns by helper selectors:</p>
+
+                    <div class="example-grid">
+                        <div class="row">
+                            <div class="one-half column">one-half</div>
+                            <div class="one-half column">one-half</div>
+                        </div>
+                        <div class="row">
+                            <div class="one-third column">one-third</div>
+                            <div class="one-third column">one-third</div>
+                            <div class="one-third column">one-third</div>
+                        </div>
+                        <div class="row">
+                            <div class="one-quarter column">one-quarter</div>
+                            <div class="one-quarter column">one-quarter</div>
+                            <div class="one-quarter column">one-quarter</div>
+                            <div class="one-quarter column">one-quarter</div>
+                        </div>
+                    </div>
+
+                    <pre><code class="example-code">&lt;div class="container">
+    &lt;div class="row">
+        &lt;div class="one-half column">one-half&lt;/div>
+        &lt;div class="one-half column">one-half&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+        &lt;div class="one-third column">one-third&lt;/div>
+        &lt;div class="one-third column">one-third&lt;/div>
+        &lt;div class="one-third column">one-third&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+        &lt;div class="one-quarter column">one-quarter&lt;/div>
+        &lt;div class="one-quarter column">one-quarter&lt;/div>
+        &lt;div class="one-quarter column">one-quarter&lt;/div>
+        &lt;div class="one-quarter column">one-quarter&lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+
+                    <p>Offsets are also available:</p>
+
+                    <div class="example-grid">
+                        <div class="row">
+                            <div class="ten columns offset-by-one">offset-by-one</div>
+                        </div>
+                        <div class="row">
+                            <div class="eight columns offset-by-two">offset-by-two</div>
+                        </div>
+                        <div class="row">
+                            <div class="six columns offset-by-three">offset-by-three</div>
+                        </div>
+                        <div class="row">
+                            <div class="four columns offset-by-four">offset-by-four</div>
+                        </div>
+                        <div class="row">
+                            <div class="two columns offset-by-five">offset-by-five</div>
+                        </div>
+                    </div>
+
+                    <pre><code class="example-code">&lt;div class="container">
+    &lt;div class="row">
+        &lt;div class="ten columns offset-by-one">offset-by-one&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+        &lt;div class="eight columns offset-by-two">offset-by-two&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+        &lt;div class="six columns offset-by-three">offset-by-three&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+        &lt;div class="four columns offset-by-four">offset-by-four&lt;/div>
+    &lt;/div>
+    &lt;div class="row">
+        &lt;div class="two columns offset-by-five">offset-by-five&lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+
+                    <p>Columns may also be nested:</p>
+
+                    <div class="example-grid">
+                        <div class="row">
+                            <div class="one-half column">Parent
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="eight columns offset-by-two">Child</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="one-half column">Parent
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="one-quarter column">Child</div>
+                                        <div class="one-quarter column">Child</div>
+                                        <div class="one-quarter column">Child</div>
+                                        <div class="one-quarter column">Child</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <pre><code class="example-code">&lt;div class="container">
+    &lt;div class="row">
+        &lt;div class="one-half column">Parent
+            &lt;div class="container">
+                &lt;div class="row">
+                    &lt;div class="eight columns offset-by-two">Child&lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+        &lt;div class="one-half column">Parent
+            &lt;div class="container">
+                &lt;div class="row">
+                    &lt;div class="one-quarter column">Child&lt;/div>
+                    &lt;div class="one-quarter column">Child&lt;/div>
+                    &lt;div class="one-quarter column">Child&lt;/div>
+                    &lt;div class="one-quarter column">Child&lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+&lt;/div></code></pre>
+
+                    <h3>Typography</h3>
+
+                    <div class="docs-example">
+                        <div class="row">
+                            <div class="six columns">
+                                <p>Type is set using relative em units (<code>rem</code>) so all font sizes can be responsively set by altering the <code>&lt;html></code> font-size. Measurements are set to equal 10px so <code>&lt;h1&gt;</code> with a <code>5.0rem</code> font-size would equal <code>50px</code>.</p>
+                                <p>BACON/strip defines default typography using <a href="http://www.google.com/fonts/specimen/Raleway">Raleway from Google fonts</a>, but it is easily altered using CSS <code>@import</code> and the defined base variables in Sass. Default <code>font-size</code> is set at 15rem (15px) with a 1.6 line height (24px). All other basic elements are also styled (<a href="#">anchors</a>, <strong>strong</strong>, <em>emphasis</em>, and <u>underline</u>, etc.).</p>
+                                <p><strong>Headings</strong> create a family of distinct sizes each with specific <code>letter-spacing</code>, <code>line-height</code>, and <code>margins</code>.</p>
+                            </div>
+                            <div class="six columns">
+                                <h1>Heading<span class="heading-font-size"> <code>&lt;h1&gt;</code> 50rem</span></h1>
+                                <h2>Heading<span class="heading-font-size"> <code>&lt;h2&gt;</code> 42rem</span></h2>
+                                <h3>Heading<span class="heading-font-size"> <code>&lt;h3&gt;</code> 36rem</span></h3>
+                                <h4>Heading<span class="heading-font-size"> <code>&lt;h4&gt;</code> 30rem</span></h4>
+                                <h5>Heading<span class="heading-font-size"> <code>&lt;h5&gt;</code> 24rem</span></h5>
+                                <h6>Heading<span class="heading-font-size"> <code>&lt;h6&gt;</code> 15rem</span></h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Lists</h4>
+
+                    <div class="row">
+                        <div class="six columns">
+                            <ul>
+                                <li>Un-ordered List</li>
+                                <li>Second list item
+                                    <ul>
+                                        <li>Child list item</li>
+                                        <li>Another child</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="six columns">
+                            <ol>
+                                <li>Ordered List</li>
+                                <li>Second list item
+                                    <ol>
+                                        <li>Child list item</li>
+                                        <li>Another child</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <h4>Code/Pre</h4>
+
+                    <p>Code styling is included. Wrap code in a <code>&lt;code&gt;</code> tag, it will show like <code>this</code>. You can add blocks of code by wrapping a <code>&lt;code&gt;</code> tag with a <code>&lt;pre&gt;</code> tag. This will preserve whitespace, including tabs.</p>
+
+                    <pre><code>function print_some_pretty_great_code () {
+    echo "Done.";
+}</code></pre>
+
+                    <pre><code class="example-code">&lt;pre>&lt;code>
+function print_some_pretty_great_code () {
+    echo "Done.";
+}
+&lt;/code>&lt;/pre></code></pre>
+
+                    <h3>Forms</h3>
+
+                    <div class="docs-section" id="forms">
+                          
+                    <p>Forms are a huge pain, but hopefully these styles make it a bit easier. All inputs, select, and buttons are normalized for a common height cross-browser so inputs can be stacked or placed alongside each other.</p>
+                    <form>
+                        <div class="row">
+                            <div class="six columns">
+                                <label for="exampleEmailInput">Your email</label>
+                                <input class="bs-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+                            </div>
+                            <div class="six columns">
+                                <label for="exampleRecipientInput">Reason for contacting</label>
+                                <select class="bs-full-width" id="exampleRecipientInput">
+                                    <option value="Option 1">Questions</option>
+                                    <option value="Option 2">Admiration</option>
+                                    <option value="Option 3">Can I get your number?</option>
+                                </select>
+                            </div>
+                        </div>
+                        <label for="exampleMessage">Message</label>
+                            <textarea class="bs-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+                            <label class="bs-pull-right">
+                                <input type="checkbox">
+                                <span class="label-body">Send a copy to yourself</span>
+                            </label>
+                        <input class="button button-primary" type="submit" value="Submit">
+                    </form>
+
+                    <pre><code class="example-code">&lt;form>
+    &lt;div class="row">
+        &lt;div class="six columns">
+            &lt;label for="exampleEmailInput">Your email&lt;/label>
+            &lt;input class="bs-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+        &lt;/div>
+        &lt;div class="six columns">
+            &lt;label for="exampleRecipientInput">Reason for contacting&lt;/label>
+            &lt;select class="bs-full-width" id="exampleRecipientInput">
+                &lt;option value="Option 1">Questions&lt;/option>
+                &lt;option value="Option 2">Admiration&lt;/option>
+                &lt;option value="Option 3">Can I get your number?&lt;/option>
+            &lt;/select>
+        &lt;/div>
+    &lt;/div>
+    &lt;label for="exampleMessage">Message&lt;/label>
+        &lt;textarea class="bs-full-width" placeholder="Hi Dave …" id="exampleMessage">&lt;/textarea>
+        &lt;label class="bs-pull-right">
+            &lt;input type="checkbox">
+            &lt;span class="label-body">Send a copy to yourself&lt;/span>
+        &lt;/label>
+    &lt;input class="button button-primary" type="submit" value="Submit">
+&lt;/form>
+
+&lt;!-- Always wrap checkbox and radio inputs in a label and use a &lt;span class="label-body"&gt; inside to style --&gt;
+
+&lt;!-- Note: The class .bs-full-width (default selector) is a utility class shorthand for css property width: 100% --&gt;</code></pre>
+
+                    <h3>Buttons</h3>
+
+                    <h3>Tables</h3>
+
+                </article>
+
+                <hr>
+
+                <article id="customize">
+                    <h2>Customizing</h2>
+
+                    <h3>Base Components</h3>
+
+                    <h3>Plugins</h3>
+                    <p>BACON/strip contains only the essential base components needed to build a responsive site.</p>
+
+                    <h4>Breakpoint Utilities</h4>
+
+                    <h4>Non-responsive Columns</h4>
+
+                    <h4>Responsive Media Wrappers</h4>
+
+                </article>
+
+                <hr>
+
+                <article id="thanks">
+                    <h3>Thanks To</h3>
+                    <ul>
+                        <li>BACON/strip started based on the <a href="https://github.com/WhatsNewSaes/Skeleton-Sass">Sass Version of Skeleton</a> by Seth Coelen, adapting the <a href="https://github.com/dhg/Skeleton">Skeleton Responsive Boilerplate</a> by Dave Gamache. Many thanks to Seth and Dave.</li>
+                        <li>BACON/strip incorporates <a href="github.com/necolas/normalize.css">normalize.css</a></li>
+                        <li><a href="https://html5bones.com">HTML5 Bones</a> was used as a starting point for this information page.</li>
+                        <li>ASCII art in comments modified from <a href="http://www.asciiartfarts.com/20100817.html">http://www.asciiartfarts.com/20100817.html</a></li>
+                    </ul>
+                </article>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer>
+        <div class="bacontainer">
+            <div class="row">
+                <div class="twelve columns">
+                    <small>Copyright &copy; <time datetime="2016">2016</time> Troy Meier</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

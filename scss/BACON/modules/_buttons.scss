@@ -34,7 +34,7 @@ input[type="submit"], input[type="reset"], input[type="button"] {
   }
 }
 
-.button-primary {
+.button-primary, input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary {
   @extend .button;
 
   color: #fff;
