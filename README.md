@@ -7,4 +7,4 @@ BACONstrip is also extremely customizable using [SASS](http://sass-lang.com/). Y
 
 ## Documentation
 
-Learn how to use the default framework styling, or customize it using Sass at <http://baconstrip.caliston.com>
+Learn how to use the default framework styling, or customize it using Sass, at <http://baconstrip.caliston.com>
