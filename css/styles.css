@@ -428,9 +428,9 @@ body {
   color: #222; }
 
 a {
-  color: #0DA900; }
+  color: #33c3f0; }
   a:hover {
-    color: #0b9000; }
+    color: #1bbcee; }
 
 hr {
   margin-top: 3rem;
@@ -508,7 +508,7 @@ h6 {
 p {
   margin-top: 0; }
 
-.bacontainer {
+.container {
   position: relative;
   width: 100%;
   max-width: 1075px;
@@ -523,11 +523,11 @@ p {
   box-sizing: border-box; }
 
 @media (min-width: 400px) {
-  .bacontainer {
+  .container {
     width: 85%;
     padding: 0; } }
 @media (min-width: 550px) {
-  .bacontainer {
+  .container {
     width: 80%; }
 
   .column,
@@ -646,7 +646,7 @@ p {
   .offset-by-one-quarter.column,
   .offset-by-one-quarter.columns {
     margin-left: 26%; } }
-.bacontainer:after,
+.container:after,
 .row:after,
 .bs-cf {
   content: "";
@@ -685,16 +685,16 @@ input[type="submit"], input[type="reset"], input[type="button"] {
 
 .button-primary, input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary {
   color: #fff;
-  background-color: #0DA900;
-  border-color: #0DA900; }
+  background-color: #33c3f0;
+  border-color: #33c3f0; }
   .button-primary:hover, input[type="submit"].button-primary:hover, input[type="reset"].button-primary:hover, input[type="button"].button-primary:hover {
     color: #fff;
-    background-color: #0b9000;
-    border-color: #0b9000; }
+    background-color: #1bbcee;
+    border-color: #1bbcee; }
   .button-primary:focus, input[type="submit"].button-primary:focus, input[type="reset"].button-primary:focus, input[type="button"].button-primary:focus {
     color: #fff;
-    background-color: #0b9000;
-    border-color: #0b9000; }
+    background-color: #1bbcee;
+    border-color: #1bbcee; }
 
 textarea,
 select {
@@ -707,7 +707,7 @@ select {
   box-sizing: border-box; }
   textarea:focus,
   select:focus {
-    border: 1px solid #0DA900;
+    border: 1px solid #33c3f0;
     outline: 0; }
 
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"] {
@@ -724,7 +724,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   box-shadow: none;
   box-sizing: border-box; }
   input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus {
-    border: 1px solid #0DA900;
+    border: 1px solid #33c3f0;
     outline: 0; }
 
 textarea {
