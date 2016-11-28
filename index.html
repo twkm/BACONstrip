@@ -29,7 +29,8 @@
                     <ul>
                         <li><a href="#introduction">Introduction</a></li>
                         <li><a href="#base">Base Components</a></li>
-                        <li><a href="#plugins">Plugins</a></li>
+                        <li><a href="#howtouse">How to Use</a></li>
+                        <li><a href="#customize">Customizing</a></li>
                         <li><a href="#thanks">Thanks To</a></li>
                     </ul>
                 </nav>
@@ -392,14 +393,62 @@ function print_some_pretty_great_code () {
 
                 <hr>
 
+                <article id="howtouse">
+
+                </article>
+                    <h2>How to Use</h2>
+
+                    <p>You can use BACON/strip by simply including the pre-generated styles.css file, but it gets really useful when you generate your own stylesheets from BACON/strip using Sass.</p>
+
+                    <ol>
+                        <li>Get the <a href="https://github.com/twkm/BACONstrip/releases/latest">latest release of BACON/strip</a> and install it on your host. The most important files are in the <code>BACON</code> folder and the <code>styles.scss</code> file in the <code>scss</code> directory.</li>
+                        <li>Customize the variables in <code>styles.scss</code> to your liking. Almost every variable in the <code>base/_variables.scss</code> can be over-written for your project. Just ensure your custom variable definitions are declared before the <code>@import "BACON/strip";</code> line in <code>styles.scss</code></li>
+                        <li>Generate your css files using Sass. You can even minify the output from Sass using the terminal command: <br><pre><code>sass scss/styles.scss:css/styles.css --style compressed</code></pre></li>
+                    </ol>
+
+                    <p><em>New to Sass?</em> Install Sass and learn about the Sass syntax at <a href="http://sass-lang.com/">sass-lang.com</a></p>
+
+                    <p>A few <a href="#plugins">included plugins</a> make styling websites easier, and you can easily add your site-specific styles directly to this file (or import them from other files).</p>
+                    <p>Here is what the default <code>styles.scss</code> looks like, with room at the end for your own styles:</p>
+
+                    <pre><code>// CUSTOM DEFINITIONS
+// Create any custom definitions here, before the base files are loaded. 
+// See the base/_variables.scss file for variables that can be set
+
+// Example:
+// $container-selector: '.bacontainer';
+// $row-selector: '.row';
+// $plugins-prefix: 'bit-';
+@import url('https://fonts.googleapis.com/css?family=Raleway'); // Import Google Fonts
+
+@import "BACON/strip";
+
+// PLUGINS //
+// @import "BACON/plugins/nr-columns"; // Non-responsive columns plugin
+@import "BACON/plugins/breakpoint-utilities";
+// @import "BACON/plugins/rmedia-wrapper"; // Responsive media helper plugin
+
+// Your styles go here...</code></pre>
+
+                <hr>
+
                 <article id="customize">
                     <h2>Customizing</h2>
 
+                    <p>BACON/strip is created to be simple to use, but it is also very customizable with Sass. You can easily change the primary colour which automatically styles many elements throughout the site, or even customize the class names used for containers, rows, and columns.</p>
+
                     <h3 id="customize-buttons">Base Components</h3>
+
+                    <p>You can create your own definitions for nearly all of the variables in the <code>base/_variables.scss</code> file. These definitions customize the styles and classes used throughout the stylesheet that is generated through BACON/strip.</p>
+                    <p>The comments and variable names in <code>base/_variables.scss</code> help guide you toward understanding what they are for and how they are used, but there are some worth highlighting:</p>
+
+                    <h4>Breakpoints</h4>
 
                     <h4>Buttons</h4>
 
-                    <h3>Plugins</h3>
+                    <h4>Media Queries</h4>
+
+                    <h3 id="plugins">Plugins</h3>
                     <p>BACON/strip contains only the essential base components needed to build a responsive site.</p>
 
                     <h4>Breakpoint Utilities</h4>
