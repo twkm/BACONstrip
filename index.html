@@ -375,6 +375,17 @@ function print_some_pretty_great_code () {
 
                     <h3>Buttons</h3>
 
+                    <p>Buttons are styled by default for input types of "submit", "reset", and "button". You can also style links by adding a <code>button</code> or <code>button-primary</code> class to them.</p>
+                    
+                    <div class="row">
+                        <div class="three columns"><strong>A Elements</strong><br><a href="#" class="button">Button</a><br><a href="#" class="button-primary">Button</a></div>
+                        <div class="three columns"><strong>input[type=submit]</strong><br><input type="submit" value="Button"><br><input type="submit" value="Button" class="button-primary"></div>
+                        <div class="three columns"><strong>input[type=button]</strong><br><input type="button" value="Button"><br><input type="button" value="Button" class="button-primary"></div>
+                        <div class="three columns"><strong>input[type=reset]</strong><br><input type="reset" value="Button"><br><input type="reset" value="Button" class="button-primary"></div>
+                    </div>
+
+                    <p>You can also create your own button styles. You could create a <code>button-red</code> class to be used in your pages, for example. There are some things to keep in mind when creating your own button styles. Read the <a href="#customize-buttons">Customizing Buttons</a> section for more details.</p>
+
                     <h3>Tables</h3>
 
                 </article>
@@ -384,7 +395,9 @@ function print_some_pretty_great_code () {
                 <article id="customize">
                     <h2>Customizing</h2>
 
-                    <h3>Base Components</h3>
+                    <h3 id="customize-buttons">Base Components</h3>
+
+                    <h4>Buttons</h4>
 
                     <h3>Plugins</h3>
                     <p>BACON/strip contains only the essential base components needed to build a responsive site.</p>
