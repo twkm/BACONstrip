@@ -8,30 +8,6 @@ $bp-larger-than-tablet    : 750px !default;
 $bp-larger-than-desktop   : 1000px !default;
 $bp-larger-than-desktophd : 1200px !default;
 
-// @media Shorthand Variables
-// To use in styles:
-// @media #{$media-mobile} {
-//		// Mobile Styles
-//}
-// Specific @media shorthand variables
-$media-mobile: '(max-width: #{$bp-larger-than-phablet - 1px})';
-$media-phablet: '(min-width: #{$bp-larger-than-phablet}) and (max-width: #{$bp-larger-than-tablet - 1px})';
-$media-tablet: '(min-width: #{$bp-larger-than-tablet}) and (max-width: #{$bp-larger-than-desktop - 1px})';
-$media-desktop: '(min-width: #{$bp-larger-than-desktop}) and (max-width: #{$bp-larger-than-desktophd - 1px})';
-$media-desktop-hd: '(min-width: #{$bp-larger-than-desktophd})';
-
-// Less than @media shorthands
-$media-lt-tablet: '(max-width: #{$bp-larger-than-tablet - 1px})';
-$media-lt-desktop: '(max-width: #{$bp-larger-than-desktophd - 1px})';
-$media-lt-desktop-hd: '(max-width: #{$bp-larger-than-desktophd - 1px})';
-
-// Greater than @media shorthands
-$media-gt-mobile: '(min-width: #{$bp-larger-than-mobile})';
-$media-gt-phablet: '(min-width: #{$bp-larger-than-phablet})';
-$media-gt-tablet: '(min-width: #{$bp-larger-than-tablet})';
-$media-gt-desktop: '(min-width: #{$bp-larger-than-desktop})';
-$media-gt-desktop-hd: '(min-width: #{$bp-larger-than-desktophd})';
-
 // Colors
 $light-grey: #e1e1e1 !default;
 $dark-grey: #333 !default;
@@ -104,5 +80,27 @@ $offset-two-thirds-selector: '#{$offset-selector-prefix}two-thirds' !default;
 $offset-one-half-selector: '#{$offset-selector-prefix}one-half' !default;
 $offset-one-quarter-selector: '#{$offset-selector-prefix}one-quarter' !default;
 
+// @media Shorthand Variables
+// To use in styles:
+// @media #{$media-mobile} {
+//		// Mobile Styles
+// }
+// These variables are not intended to be customized. Edit the breakpoints variables
+// above to change the breakpoints and these will automatically be updated.
+$media-mobile: '(max-width: #{$bp-larger-than-phablet - 1px})';
+$media-phablet: '(min-width: #{$bp-larger-than-phablet}) and (max-width: #{$bp-larger-than-tablet - 1px})';
+$media-tablet: '(min-width: #{$bp-larger-than-tablet}) and (max-width: #{$bp-larger-than-desktop - 1px})';
+$media-desktop: '(min-width: #{$bp-larger-than-desktop}) and (max-width: #{$bp-larger-than-desktophd - 1px})';
+$media-desktop-hd: '(min-width: #{$bp-larger-than-desktophd})';
 
+// Less than @media shorthands
+$media-lt-tablet: '(max-width: #{$bp-larger-than-tablet - 1px})';
+$media-lt-desktop: '(max-width: #{$bp-larger-than-desktophd - 1px})';
+$media-lt-desktop-hd: '(max-width: #{$bp-larger-than-desktophd - 1px})';
 
+// Greater than @media shorthands
+$media-gt-mobile: '(min-width: #{$bp-larger-than-mobile})';
+$media-gt-phablet: '(min-width: #{$bp-larger-than-phablet})';
+$media-gt-tablet: '(min-width: #{$bp-larger-than-tablet})';
+$media-gt-desktop: '(min-width: #{$bp-larger-than-desktop})';
+$media-gt-desktop-hd: '(min-width: #{$bp-larger-than-desktophd})';
