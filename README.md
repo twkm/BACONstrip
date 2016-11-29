@@ -35,10 +35,10 @@ Default `styles.scss`:
 
 @import "BACON/strip";
 
-// PLUGINS //
-// @import "BACON/plugins/nr-columns"; // Non-responsive columns plugin
-@import "BACON/plugins/breakpoint-utilities";
-// @import "BACON/plugins/rmedia-wrapper"; // Responsive media helper plugin
+// BACON/bits (Plugins) //
+// @import "BACON/bits/nr-columns"; // Non-responsive columns plugin
+@import "BACON/bits/breakpoint-utilities";
+// @import "BACON/bits/rmedia-wrapper"; // Responsive media helper plugin
 
 // Your styles go here...
 
