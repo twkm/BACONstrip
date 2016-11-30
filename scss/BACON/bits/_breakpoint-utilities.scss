@@ -18,7 +18,7 @@
 .show-desktop-hd-block,
 .show-desktop-hd-inline-block,
 .show-desktop-hd-inline {
-  display: none;
+  display: none !important;
 }
 
 @media #{$media-mobile} {
