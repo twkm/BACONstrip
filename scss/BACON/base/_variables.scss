@@ -25,8 +25,8 @@ $font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sa
 
 //Grid Variables
 $container-width: 1075px !default;
-$container-width-larger-than-mobile: 85% !default;
-$container-width-larger-than-phablet: 80% !default;
+$container-width-grid-disabled: 85% !default;
+$container-width-grid-active: 80% !default;
 $total-columns: 12 !default;
 $column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
 $column-margin: 4% !default; // space between columns
@@ -104,3 +104,6 @@ $media-gt-phablet: '(min-width: #{$bp-larger-than-phablet})';
 $media-gt-tablet: '(min-width: #{$bp-larger-than-tablet})';
 $media-gt-desktop: '(min-width: #{$bp-larger-than-desktop})';
 $media-gt-desktop-hd: '(min-width: #{$bp-larger-than-desktophd})';
+
+// Choose when the grid becomes active
+$grid-active: $media-gt-tablet !default;
