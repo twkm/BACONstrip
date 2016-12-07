@@ -46,10 +46,6 @@
                     <h2>Introduction</h2>
                     <p>BACON/strip was created to be a completely customizable, lightweight responsive framework. Built with Sass, this framework allows you to customize everything, from how you name the selectors for containers in the grid, to the prefixes used for tools and plugins. This ability was initially created to be able to easily retrofit an existing grid system, but it also allows you to show a little of your own style in your code (the container for this page has had its selector renamed to <code>.bacontainer</code>).</p>
                     <p>The framework also provides an easy way to create plugins to enhance its usefulness. Although it is simple and lightweight, BACON/strip can easily be extended to suit your unique needs.</p>
-
-                    <pre><code>This documentation is a work in progress... 
-I am working on getting it ready as soon possible. 
-Please forgive its incomplete state.</code></pre>
                 </article>
 
                 <hr>
@@ -60,7 +56,7 @@ Please forgive its incomplete state.</code></pre>
 
                     <h3>Grid</h3>
                     <p>The grid in BACON/strip is a responsive grid which fluidly transitions between breakpoints to allow you to style your HTML to adapt to different sizes of display.</p>
-                    <p>By default, the grid container has a maximum width of 1075px, but this is easily changed using Sass.</p>
+                    <p>By default, the grid container has a maximum width of 1075px, but this is <a href="#customize">easily changed using Sass</a>.</p>
 
                     <div class="example-grid">
                         <div class="row">
@@ -442,20 +438,122 @@ function print_some_pretty_great_code () {
                     <p>You can create your own definitions for nearly all of the variables in the <code>base/_variables.scss</code> file. These definitions customize the styles and classes used throughout the stylesheet that is generated through BACON/strip.</p>
                     <p>The comments and variable names in <code>base/_variables.scss</code> help guide you toward understanding what they are for and how they are used, but there are some worth highlighting:</p>
 
-                    <h4>Breakpoints</h4>
+                    <h4 id="breakpoints">Breakpoints</h4>
+
+                    <p>There are 5 defined breakpoints in BACON/strip, and you can customize the widths to suit your needs. These breakpoints are used to set up media queries, media shorthand variables, and activate the responsive grid. The defaults are listed below, but you can change them by defining the width you want before <code>@import "BACON/strip";</code></p>
+                    <ul>
+                        <li>$bp-larger-than-mobile: 400px;</li>
+                        <li>$bp-larger-than-phablet: 550px;</li>
+                        <li>$bp-larger-than-tablet: 750px;</li>
+                        <li>$bp-larger-than-desktop: 1000px;</li>
+                        <li>$bp-larger-than-desktophd: 1200px;</li>
+                    </ul>
+
+                    <p>By default, the grid activates at the tablet breakpoint. This can be changed by setting the <code>$grid-active</code> variable to a different <a href="#media">media shorthand variable</a>. The default is <code>$grid-active: $media-gt-tablet;</code> but you could change it to <code>$grid-active: $media-gt-phablet</code> to activate the grid on the phablet breakpoint.</p> 
 
                     <h4>Buttons</h4>
 
-                    <h4>Media Queries</h4>
+                    <p>To be sure that your custom button styles are available for all element types, include all element definitions when you extend the button class. Here is a good starting point if you wanted to create a <code>.button-red</code> class:</p>
+                    <pre><code>// Red Button Class
+.button-red, 
+input[type="submit"].button-red, 
+input[type="reset"].button-red, 
+input[type="button"].button-red {
+  @extend .button;
+
+  color: #FFF;
+  background-color: #F00;
+  border-color: darken(#F00, 20%);
+}</code></pre>
+
+                    <h4 id="media">Media Queries</h4>
+
+                    <p>There are some media shorthand variables defined to make it easier for you to define styles based on defined breakpoints. They are also used within the grid so that it responds to any changes you've made to the default breakpoint sizes. You can use these shorthand variables within media queries in your styles:</p>
+
+                    <h5>Target a Specific Breakpoint</h5>
+
+                    <p><code>$media-*breakpoint*</code> allows you to target a specific breakpoint for full control.</p>
+
+                    <h5>Greater Than a Breakpoint</h5>
+
+                    <p><code>$media-gt-*breakpoint*</code> allows you to target breakpoints larger than the breakpoint's definition.</p>
+
+                    <h5>Less Than a Breakpoint</h5>
+
+                    <p><code>$media-lt-*breakpoint*</code> allows you to target breakpoints smaller than the breakpoint's definition.</p>
+
+                    <pre><code>h1 {
+    
+    font-size: 3 rem;
+
+    // Mobile Styles
+    @media #{$media-mobile} {
+        font-size: 2rem;
+    }
+
+    // Larger than Desktop Styles 
+    @media #{$media-gt-desktop} {
+        font-size: 3.5rem;
+    }
+
+    // Smaller than Tablet Styles
+    @media #{$media-lt-tablet} {
+        font-size: 2.25rem;
+    }
+}</code></pre>
+
+                    <p><em>Note:</em> You will need to use <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#interpolation_">interpolation</a> when using these variables as part of selectors (or @media queries). In Sass, nesting the media queries within the element you're customizing for a breakpoint allows you to see all of the styles for that element in the same place.</p>
 
                     <h3 id="plugins">Plugins</h3>
-                    <p>BACON/strip contains only the essential base components needed to build a responsive site.</p>
+                    <p>BACON/strip contains only the essential base components needed to build a responsive site, but it also includes a few default plugins to solve some common problems.</p>
 
                     <h4>Breakpoint Utilities</h4>
 
+                    <p>The Breakpoint Utilities plugin provides some simple classes allowing you to show and hide elements depending on the visible breakpoint. You can hide elements on specific breakpoints (with widths <a href="#breakpoints">you can override</a>) using the following classes:</p>
+                    <ul>
+                        <li><code>.hide-mobile</code></li>
+                        <li><code>.hide-phablet</code></li>
+                        <li><code>.hide-tablet</code></li>
+                        <li><code>.hide-desktop</code></li>
+                        <li><code>.hide-desktop-hd</code></li>
+                    </ul>
+
+                    <p>Similar classes are used to show an element, with a suffix for how you want the element to display. For example, <code>.show-desktop-block</code> shows the element with <code>display: block;</code> in the desktop breakpoint. The display suffixes include <code>.show-*breakpoint*-block</code>, <code>.show-*breakpoint*-inline</code>, and <code>.show-*breakpoint*-inline-block</code>.</p>
+
                     <h4>Non-responsive Columns</h4>
 
+                    <p>Non-responsive columns can help you create grid layouts when the grid is inactive, usually on a mobile device. This allows you to create simple columns that do not change to block elements at the smallest screen sizes.</p>
+                    <p>To use, rather than specifying the column layout of an element using the <code>.column</code> class, use the <code>.nr-column</code> class</p>
+                    <pre><code>// Non-responsive columns
+&lt;div class="row">
+    &lt;div class="six nr-columns">This column will always take up 50% of the row, 
+        even when the grid is disabled&lt;/div>
+    &lt;div class="six nr-columns">This column will too!&lt;/div>
+&lt;/div>
+    
+// Default, responsive columns
+&lt;div class="row">
+    &lt;div class="six columns">This column will take up 100% of the row when the grid is disabled, 
+        but 50% when the grid is active&lt;/div>
+    &lt;div class="six columns">This column is also responsive!&lt;/div>
+&lt;/div></code></pre>
+
                     <h4>Responsive Media Wrappers</h4>
+
+                    <p>This plugin allows you to make embedded videos and other iframed media responsive. Wrap your embed in a <code>.rmedia-wrapper</code> and add a ratio class to the wrapper and they will be fully responsive in all viewport sizes. <code>.r16x9</code> and <code>.r4x3</code> ratios are available for common video ratios.</p>
+                    <pre><code>// Responsive Video
+&lt;div class="rmedia-wrapper r16x9">
+    &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/4M6qAMMqFhI" frameborder="0" allowfullscreen>&lt;/iframe>
+&lt;/div></code></pre>
+
+                    <h4>Creating Your Own</h4>
+
+                    <p>To create your own plugins, put your plugin .scss file in the <code>BACON/bits</code> folder and import it in your <code>styles.scss</code> file after the included plugins.</p>
+                    <p>To ensure your plugins aren't overwritten by others, include the <code>$plugins-prefix</code> in your classes:</p>
+                    <pre><code>// Simple Border Plugin
+#{$plugins-prefix}simple-border {
+    border: 1px solid #000;
+}</code></pre>
 
                 </article>
 
