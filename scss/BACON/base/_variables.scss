@@ -29,7 +29,8 @@ $container-width-grid-disabled: 85% !default;
 $container-width-grid-active: 80% !default;
 $total-columns: 12 !default;
 $column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
-$column-margin: 4% !default; // space between columns
+$gutter-style: "padding" !default; // Set "margin" or "padding" gutter styles
+$column-margin: 1.5rem !default; // space between columns. If margin gutter style, must be a percentage value
 
 // Misc
 $global-radius: 4px !default;

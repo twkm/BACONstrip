@@ -1,8 +1,18 @@
 
 @function grid-column-width($n) {
-  @return $column-width * $n - ($column-margin*($total-columns - $n)/$total-columns);
+  @if $gutter-style == "margin" {
+    @return $column-width * $n - ($column-margin*($total-columns - $n)/$total-columns);
+  } @else if $gutter-style == "padding" {
+    @return percentage(($column-width * $n)/100);
+  }
+
 }
 
 @function grid-offset-length($n) {
-  @return grid-column-width($n) + $column-margin;
+  @if $gutter-style == "margin" {
+    @return grid-column-width($n) + $column-margin;
+  } @else if $gutter-style == "padding" {
+    @return grid-column-width($n);
+  }
+
 }
