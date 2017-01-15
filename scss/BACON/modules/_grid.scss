@@ -35,15 +35,13 @@
     @if $gutter-style == "margin" {
         margin-left: $column-margin;
     } @else if $gutter-style == "padding" {
-        padding-left: 0 $column-margin 0 $column-margin;
+        padding: 0 $column-margin 0 $column-margin;
     }
   }
   #{$column-selector-single}:first-child,
   #{$column-selector-plural}:first-child {
     @if $gutter-style == "margin" {
         margin-left: 0;
-    } @else if $gutter-style == "padding" {
-        padding-left: 0;
     }
   }
 
@@ -58,12 +56,10 @@
   #{$col-9-selector}         { width: grid-column-width(9);  }
   #{$col-10-selector}         { width: grid-column-width(10); }
   #{$col-11-selector}         { width: grid-column-width(11); }
-  #{$col-12-selector}         { 
+  #{$col-12-selector}         {
     width: 100%;
     @if $gutter-style == "margin" {
         margin-left: 0;
-    } @else if $gutter-style == "padding" {
-        padding-left: 0;
     }
   }
 
