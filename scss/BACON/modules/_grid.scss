@@ -27,6 +27,11 @@
 
 // Activate the grid
 @media #{$grid-active} {
+  #{$flexbox-row-selector} {
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: flex;
+  }
   #{$container-selector} {
     width: $container-width-grid-active;
   }

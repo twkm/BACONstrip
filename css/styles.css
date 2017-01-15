@@ -527,16 +527,17 @@ p {
     width: 85%;
     padding: 0; } }
 @media (min-width: 750px) {
+  .flex-row {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex; }
+
   .container {
     width: 80%; }
 
   .column,
   .columns {
-    padding-left: 0 1.5rem 0 1.5rem; }
-
-  .column:first-child,
-  .columns:first-child {
-    padding-left: 0; }
+    padding: 0 1.5rem 0 1.5rem; }
 
   .one.column, .one.columns {
     width: 8.33333%; }
@@ -572,8 +573,7 @@ p {
     width: 91.66667%; }
 
   .twelve.columns {
-    width: 100%;
-    padding-left: 0; }
+    width: 100%; }
 
   .one-third.column {
     width: 33.33333%; }
