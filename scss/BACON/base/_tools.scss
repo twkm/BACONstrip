@@ -2,12 +2,12 @@
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 #{$tools-prefix}full-width {
-  width: 100%;
+  width: 100% !important;
   box-sizing: border-box;
 }
 
 #{$tools-prefix}max-full-width {
-  max-width: 100%;
+  max-width: 100% !important;
   box-sizing: border-box;
 }
 
@@ -17,4 +17,8 @@
 
 #{$tools-prefix}pull-left {
   float: left;
+}
+
+#{$tools-prefix}text-center {
+	text-align: center;
 }
